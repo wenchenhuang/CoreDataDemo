@@ -221,6 +221,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ojp-c8-9hn" id="khL-aF-15K"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pPg-q1-cd4">
                                 <rect key="frame" x="204" y="285" width="194" height="30"/>
@@ -230,6 +233,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ojp-c8-9hn" id="Pul-ew-1me"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lw0-4M-2Ai">
                                 <rect key="frame" x="145" y="229" width="51" height="21"/>
@@ -243,41 +249,39 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="w8j-9j-vdN">
-                                <rect key="frame" x="0.0" y="387" width="600" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="453630741.276016">
-                                    <!--2015-05-18 08:32:21 +0000-->
-                                </date>
-                                <date key="minimumDate" timeIntervalSinceReferenceDate="-852037200">
-                                    <!--1974-01-01 11:00:00 +0000-->
-                                </date>
-                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
-                                    <!--2037-12-31 11:00:00 +0000-->
-                                </date>
-                            </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Birthday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXf-Pn-13I">
-                                <rect key="frame" x="268" y="357" width="65" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXf-Pn-13I">
+                                <rect key="frame" x="174" y="339" width="22" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LdP-xo-gVm">
+                                <rect key="frame" x="204" y="336" width="194" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="194" id="2eD-sk-BZc"/>
+                                    <constraint firstAttribute="height" constant="30" id="WxU-5W-i7y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ojp-c8-9hn" id="HFx-qU-1cv"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="w8j-9j-vdN" firstAttribute="leading" secondItem="QGg-da-2uq" secondAttribute="leadingMargin" constant="-16" id="1jz-Ip-QBK"/>
+                            <constraint firstItem="LdP-xo-gVm" firstAttribute="leading" secondItem="JXf-Pn-13I" secondAttribute="trailing" constant="8" id="BEK-5U-CYg"/>
                             <constraint firstAttribute="centerY" secondItem="pPg-q1-cd4" secondAttribute="centerY" id="Ct5-pW-pzs"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="w8j-9j-vdN" secondAttribute="trailing" constant="-16" id="DMP-JS-LMa"/>
-                            <constraint firstItem="pPg-q1-cd4" firstAttribute="centerX" secondItem="JXf-Pn-13I" secondAttribute="centerX" constant="0.5" id="GD9-1v-66B"/>
+                            <constraint firstItem="pPg-q1-cd4" firstAttribute="centerX" secondItem="LdP-xo-gVm" secondAttribute="centerX" id="DJj-V5-fqg"/>
                             <constraint firstItem="vBw-cC-h2G" firstAttribute="centerY" secondItem="pPg-q1-cd4" secondAttribute="centerY" constant="-0.5" id="HDj-8g-8sF"/>
                             <constraint firstItem="pPg-q1-cd4" firstAttribute="leading" secondItem="vBw-cC-h2G" secondAttribute="trailing" constant="8" id="K6r-fY-1wE"/>
-                            <constraint firstItem="w8j-9j-vdN" firstAttribute="top" secondItem="JXf-Pn-13I" secondAttribute="bottom" constant="8" id="Ops-2W-SDl"/>
+                            <constraint firstItem="LdP-xo-gVm" firstAttribute="top" secondItem="pPg-q1-cd4" secondAttribute="bottom" constant="21" id="PUd-C5-lHG"/>
                             <constraint firstAttribute="centerX" secondItem="pPg-q1-cd4" secondAttribute="centerX" constant="-1" id="TGA-Zv-SzP"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="w8j-9j-vdN" secondAttribute="bottom" constant="-5" id="UgL-Ab-t4w"/>
                             <constraint firstItem="lw0-4M-2Ai" firstAttribute="centerY" secondItem="MIQ-ul-K0b" secondAttribute="centerY" constant="-0.5" id="bwt-5b-WCV"/>
+                            <constraint firstItem="LdP-xo-gVm" firstAttribute="centerY" secondItem="JXf-Pn-13I" secondAttribute="centerY" constant="1.5" id="dYZ-0J-omZ"/>
                             <constraint firstAttribute="centerY" secondItem="MIQ-ul-K0b" secondAttribute="centerY" constant="60" id="dvP-5o-xCv"/>
                             <constraint firstAttribute="centerX" secondItem="MIQ-ul-K0b" secondAttribute="centerX" constant="-1" id="eBz-bf-LdQ"/>
                             <constraint firstItem="MIQ-ul-K0b" firstAttribute="leading" secondItem="lw0-4M-2Ai" secondAttribute="trailing" constant="8" id="gDo-MS-kFS"/>
-                            <constraint firstItem="w8j-9j-vdN" firstAttribute="top" secondItem="pPg-q1-cd4" secondAttribute="bottom" constant="71" id="rdc-fx-Vdy"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Employee" id="dGf-5t-hVd">
@@ -294,7 +298,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ageTextfield" destination="pPg-q1-cd4" id="5p5-8s-AoK"/>
-                        <outlet property="brithdayDatePicker" destination="w8j-9j-vdN" id="ahh-ef-V4k"/>
+                        <outlet property="idTextfield" destination="LdP-xo-gVm" id="Ap6-eK-Vac"/>
                         <outlet property="nameTextfield" destination="MIQ-ul-K0b" id="FJU-0x-Gwt"/>
                     </connections>
                 </viewController>

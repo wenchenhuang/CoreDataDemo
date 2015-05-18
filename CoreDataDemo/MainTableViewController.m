@@ -28,7 +28,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.allowsSelection = YES;
     AppDelegate * sharedDelegate = [[UIApplication sharedApplication] delegate];
     sharedDelegate.store = self.store;
     [self.fetchedResultsController performFetch:nil];

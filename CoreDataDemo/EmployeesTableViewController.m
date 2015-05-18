@@ -52,10 +52,8 @@
     namelabel.text = employee.name;
     UILabel * agelabel = (UILabel *)[cell viewWithTag:12];
     agelabel.text = [NSString stringWithFormat:@"%ld",(long)employee.age.integerValue];
-    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
     UILabel * birthdaylabel = (UILabel *)[cell viewWithTag:13];
-    birthdaylabel.text = [dateFormatter stringFromDate:employee.birthday];
+    birthdaylabel.text = employee.identifier;
     return cell;
 }
 
@@ -65,7 +63,7 @@
         Employee * employee = [Employee insertNewObjectInManagedObjectContext:self.managedcontext];
         employee.name = svc.nameTextfield.text;
         employee.age = @(svc.ageTextfield.text.intValue);
-        employee.birthday = svc.brithdayDatePicker.date;
+        employee.identifier = svc.idTextfield.text;
         employee.department = self.mydepartment;
         [self.tableView reloadData];
     }

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5273FDCD1B0A14AF006BDB00 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 5273FDCC1B0A14AF006BDB00 /* Employee.m */; };
-		5273FDD01B0A14B0006BDB00 /* Department.m in Sources */ = {isa = PBXBuildFile; fileRef = 5273FDCF1B0A14B0006BDB00 /* Department.m */; };
 		52891DFD1B01B74200DD26B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 52891DFC1B01B74200DD26B1 /* main.m */; };
 		52891E001B01B74200DD26B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 52891DFF1B01B74200DD26B1 /* AppDelegate.m */; };
 		52891E061B01B74300DD26B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52891E041B01B74300DD26B1 /* Main.storyboard */; };
@@ -20,6 +18,8 @@
 		52891E281B01C85500DD26B1 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52891E271B01C85500DD26B1 /* MainTableViewController.m */; };
 		52891E371B01CC4B00DD26B1 /* Department+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 52891E361B01CC4B00DD26B1 /* Department+Action.m */; };
 		52891E3A1B01CC6200DD26B1 /* Employee+Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 52891E391B01CC6200DD26B1 /* Employee+Action.m */; };
+		529AC28A1B0A323E00B4EA21 /* Department.m in Sources */ = {isa = PBXBuildFile; fileRef = 529AC2891B0A323E00B4EA21 /* Department.m */; };
+		529AC28D1B0A323F00B4EA21 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 529AC28C1B0A323F00B4EA21 /* Employee.m */; };
 		52EB06971B09AFE900794E98 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB06961B09AFE900794E98 /* Store.m */; };
 		52EB069A1B09C19100794E98 /* AddDepartmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB06991B09C19100794E98 /* AddDepartmentViewController.m */; };
 		52EB069D1B09C1A600794E98 /* AddEmployeeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52EB069C1B09C1A600794E98 /* AddEmployeeViewController.m */; };
@@ -38,10 +38,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5273FDCB1B0A14AF006BDB00 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Employee.h; path = ../Employee.h; sourceTree = "<group>"; };
-		5273FDCC1B0A14AF006BDB00 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Employee.m; path = ../Employee.m; sourceTree = "<group>"; };
-		5273FDCE1B0A14B0006BDB00 /* Department.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Department.h; path = ../Department.h; sourceTree = "<group>"; };
-		5273FDCF1B0A14B0006BDB00 /* Department.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Department.m; path = ../Department.m; sourceTree = "<group>"; };
 		52891DF71B01B74200DD26B1 /* CoreDataDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52891DFB1B01B74200DD26B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52891DFC1B01B74200DD26B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,6 +58,10 @@
 		52891E361B01CC4B00DD26B1 /* Department+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Department+Action.m"; sourceTree = "<group>"; };
 		52891E381B01CC6200DD26B1 /* Employee+Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Employee+Action.h"; sourceTree = "<group>"; };
 		52891E391B01CC6200DD26B1 /* Employee+Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Employee+Action.m"; sourceTree = "<group>"; };
+		529AC2881B0A323E00B4EA21 /* Department.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Department.h; path = ../Department.h; sourceTree = "<group>"; };
+		529AC2891B0A323E00B4EA21 /* Department.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Department.m; path = ../Department.m; sourceTree = "<group>"; };
+		529AC28B1B0A323F00B4EA21 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Employee.h; path = ../Employee.h; sourceTree = "<group>"; };
+		529AC28C1B0A323F00B4EA21 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Employee.m; path = ../Employee.m; sourceTree = "<group>"; };
 		52EB06951B09AFE900794E98 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
 		52EB06961B09AFE900794E98 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 		52EB06981B09C19100794E98 /* AddDepartmentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDepartmentViewController.h; sourceTree = "<group>"; };
@@ -155,10 +155,10 @@
 		52891E331B01CBAA00DD26B1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5273FDCE1B0A14B0006BDB00 /* Department.h */,
-				5273FDCF1B0A14B0006BDB00 /* Department.m */,
-				5273FDCB1B0A14AF006BDB00 /* Employee.h */,
-				5273FDCC1B0A14AF006BDB00 /* Employee.m */,
+				529AC28B1B0A323F00B4EA21 /* Employee.h */,
+				529AC28C1B0A323F00B4EA21 /* Employee.m */,
+				529AC2881B0A323E00B4EA21 /* Department.h */,
+				529AC2891B0A323E00B4EA21 /* Department.m */,
 				52891E201B01C20100DD26B1 /* CoreDataDemo.xcdatamodeld */,
 			);
 			name = Models;
@@ -307,17 +307,17 @@
 				52891E221B01C20100DD26B1 /* CoreDataDemo.xcdatamodeld in Sources */,
 				52891E001B01B74200DD26B1 /* AppDelegate.m in Sources */,
 				52EB069D1B09C1A600794E98 /* AddEmployeeViewController.m in Sources */,
-				5273FDCD1B0A14AF006BDB00 /* Employee.m in Sources */,
 				52891E251B01C48E00DD26B1 /* FetchTableHelper.m in Sources */,
 				52EB06971B09AFE900794E98 /* Store.m in Sources */,
 				52891E371B01CC4B00DD26B1 /* Department+Action.m in Sources */,
 				52891E281B01C85500DD26B1 /* MainTableViewController.m in Sources */,
+				529AC28A1B0A323E00B4EA21 /* Department.m in Sources */,
 				52EB06A91B09CCEF00794E98 /* EmployeesTableViewController.m in Sources */,
 				52891E3A1B01CC6200DD26B1 /* Employee+Action.m in Sources */,
 				52891DFD1B01B74200DD26B1 /* main.m in Sources */,
 				52EB069A1B09C19100794E98 /* AddDepartmentViewController.m in Sources */,
 				52EB06A31B09C3D300794E98 /* AnimationHandler.m in Sources */,
-				5273FDD01B0A14B0006BDB00 /* Department.m in Sources */,
+				529AC28D1B0A323F00B4EA21 /* Employee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

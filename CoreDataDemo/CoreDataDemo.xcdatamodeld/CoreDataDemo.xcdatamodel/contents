@@ -7,12 +7,12 @@
     </entity>
     <entity name="Employee" representedClassName="Employee" syncable="YES">
         <attribute name="age" optional="YES" attributeType="Integer 16" minValueString="1" maxValueString="100" syncable="YES"/>
-        <attribute name="birthday" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="identifier" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="department" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Department" inverseName="employees" inverseEntity="Department" syncable="YES"/>
     </entity>
     <elements>
         <element name="Department" positionX="151" positionY="-0" width="128" height="90"/>
-        <element name="Employee" positionX="-47" positionY="-13" width="128" height="103"/>
+        <element name="Employee" positionX="-47" positionY="-13" width="128" height="105"/>
     </elements>
 </model>

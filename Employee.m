@@ -13,7 +13,7 @@
 @implementation Employee
 
 @dynamic age;
-@dynamic birthday;
+@dynamic identifier;
 @dynamic name;
 @dynamic department;
 

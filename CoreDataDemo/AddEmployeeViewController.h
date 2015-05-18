@@ -11,6 +11,6 @@
 @interface AddEmployeeViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *nameTextfield;
 @property (weak, nonatomic) IBOutlet UITextField *ageTextfield;
-@property (weak, nonatomic) IBOutlet UIDatePicker *brithdayDatePicker;
+@property (weak, nonatomic) IBOutlet UITextField *idTextfield;
 
 @end
