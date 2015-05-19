@@ -53,7 +53,9 @@
         // Specify how the fetched objects should be sorted
         NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name"
                                                                        ascending:YES];
-        [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor, nil]];
+        NSSortDescriptor * sortDescriptor2 = [[NSSortDescriptor alloc] initWithKey:@"floor"
+                                                                         ascending:YES];
+        [fetchRequest setSortDescriptors:[NSArray arrayWithObjects:sortDescriptor,sortDescriptor2, nil]];
         _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest
                                                                         managedObjectContext:[self managedcontext]
                                                                           sectionNameKeyPath:@"name" cacheName:@"DemoCache"];
@@ -98,12 +100,7 @@
         Department * department = [self.fetchedResultsController objectAtIndexPath:indexPath];
         [[self managedcontext] deleteObject:department];
     }];
-    
-    UITableViewRowAction * action2 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Edit" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        
-    }];
-    action2.backgroundColor = [UIColor greenColor];
-    return @[action1,action2];
+    return @[action1];
 }
 
 

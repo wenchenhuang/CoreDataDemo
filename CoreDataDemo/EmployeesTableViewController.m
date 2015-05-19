@@ -71,6 +71,7 @@
 -(NSArray*)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewRowAction * action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"Delete" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         Employee * employee = [[self persons] objectAtIndex:indexPath.row];
+        [self.managedcontext deleteObject:employee];
         [self.mydepartment removeEmployeesObject:employee];
         [self.tableView beginUpdates];
         [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -84,7 +85,9 @@
     action2.backgroundColor = [UIColor greenColor];
     return @[action1,action2];
 }
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
 
+}
 
 
 @end

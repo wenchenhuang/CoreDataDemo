@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="AuC-nT-bdJ" detailTextLabel="fgk-78-Qgr" style="IBUITableViewCellStyleSubtitle" id="9Ak-UA-Kfu">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" textLabel="AuC-nT-bdJ" detailTextLabel="fgk-78-Qgr" style="IBUITableViewCellStyleSubtitle" id="9Ak-UA-Kfu">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Ak-UA-Kfu" id="fda-AU-xuJ">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -204,7 +204,7 @@
         <!--New Employee-->
         <scene sceneID="Ojy-BU-Jq4">
             <objects>
-                <viewController id="ojp-c8-9hn" customClass="AddEmployeeViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="emlpoyee" id="ojp-c8-9hn" customClass="AddEmployeeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5fM-Ak-BcA"/>
                         <viewControllerLayoutGuide type="bottom" id="74G-iP-3Lt"/>
@@ -305,7 +305,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fmx-sa-sSX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eIq-vn-U3q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2573" y="886"/>
+            <point key="canvasLocation" x="2565" y="894"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ytz-83-eo5">
