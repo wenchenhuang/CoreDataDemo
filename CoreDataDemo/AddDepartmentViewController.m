@@ -7,6 +7,7 @@
 //
 
 #import "AddDepartmentViewController.h"
+#import "AnimationHandler.h"
 
 @interface AddDepartmentViewController ()<UITextFieldDelegate>
 
@@ -18,4 +19,20 @@
     [textField resignFirstResponder];
     return YES;
 }
+-(NSArray *)keysOfTextfields{
+    return @[@"nameTextfield",@"floorTextfiled"];
+}
+-(BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender{
+    if ([identifier isEqualToString:@"doneFromAddDepart"]) {
+        for (NSString * key in [self keysOfTextfields]) {
+            UITextField * textfield = [self valueForKey:key];
+            if (textfield.text.length == 0) {
+                [AnimationHandler addShakeAnimationWithView:textfield];
+                return NO;
+            }
+        }
+    }
+    return YES;
+}
+
 @end
