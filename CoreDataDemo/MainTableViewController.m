@@ -92,7 +92,6 @@
             department.floor = @(svc.floorTextfiled.text.intValue);
     }
 }
-
 -(NSArray*)tableView:(UITableView *)tableView editActionsForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewRowAction * action1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"Delete" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
         Department * department = [self.fetchedResultsController objectAtIndexPath:indexPath];
@@ -108,7 +107,7 @@
 }
 
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-
+ 
 }
 
 @end

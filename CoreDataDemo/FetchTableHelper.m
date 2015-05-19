@@ -48,14 +48,22 @@
     } else
         return nil;
 }
-
-- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
-    return [self.fetchresultcontroller sectionIndexTitles];
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath{
+    return YES;
 }
-
-- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
-    return [self.fetchresultcontroller sectionForSectionIndexTitle:title atIndex:index];
+- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
+    return NO;
 }
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+  
+}
+//- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView {
+//    return [self.fetchresultcontroller sectionIndexTitles];
+//}
+//
+//- (NSInteger)tableView:(UITableView *)tableView sectionForSectionIndexTitle:(NSString *)title atIndex:(NSInteger)index {
+//    return [self.fetchresultcontroller sectionForSectionIndexTitle:title atIndex:index];
+//}
 //Delegate
 
 - (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {

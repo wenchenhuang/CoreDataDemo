@@ -85,8 +85,6 @@
     return @[action1,action2];
 }
 
--(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-}
+
 
 @end
