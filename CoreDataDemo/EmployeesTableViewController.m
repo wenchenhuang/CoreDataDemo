@@ -79,12 +79,34 @@
     }];
     
     UITableViewRowAction * action2 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault title:@"Edit" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        //Action 2
-        
+        Employee * employee = [[self persons] objectAtIndex:indexPath.row];
+        [self updateEmployeeWithAlert:employee Indexpath:indexPath];
     }];
     action2.backgroundColor = [UIColor greenColor];
-    return @[action1,action2];
+    return @[action2,action1];
 }
+
+-(void)updateEmployeeWithAlert:(Employee *)employee Indexpath:(NSIndexPath *)indexPath{
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Update Employee" message:employee.name preferredStyle:UIAlertControllerStyleAlert];
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.text = [NSString stringWithFormat:@"%d",employee.age.intValue];
+        textField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
+    }];
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.text = [NSString stringWithFormat:@"%@",employee.identifier];
+    }];
+    [alert addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+    [alert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        NSArray * textfields = [alert textFields];
+        UITextField * ageTextfield = textfields[0];
+        UITextField * idTextfield = textfields[1];
+        employee.age = @(ageTextfield.text.integerValue);
+        employee.identifier = idTextfield.text;
+        [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    }]];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
 -(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
 
 }
