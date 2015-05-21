@@ -12,6 +12,5 @@
 +(BOOL)isStringValidNumber:(NSString *)str{
     NSCharacterSet * numCharset = [NSCharacterSet decimalDigitCharacterSet];
     return [[str stringByTrimmingCharactersInSet:numCharset] isEqualToString:@""];
-    
 }
 @end
