@@ -11,4 +11,5 @@
 @interface Department (Action)
 +(NSString *)entityName;
 +(Department *)insertNewObjectInManagedObjectContext:(NSManagedObjectContext *) context;
+-(NSMutableSet *)mutableEmployees;
 @end

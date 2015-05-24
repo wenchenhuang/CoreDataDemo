@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>406CEA02-78C5-4275-892B-177DC81F8F14</string>
 	<key>IDESourceControlProjectName</key>
-	<string>CoreDataDemo</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>FE1F7C54C6CB47082F481228012EE919B14A39E0</key>
 		<string>https://github.com/wenchenhuang/CoreDataDemo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CoreDataDemo.xcodeproj</string>
+	<string>CoreDataDemo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>FE1F7C54C6CB47082F481228012EE919B14A39E0</key>

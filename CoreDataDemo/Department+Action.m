@@ -7,7 +7,7 @@
 //
 
 #import "Department+Action.h"
-
+#import "Employee+Action.h"
 @implementation Department (Action)
 
 +(NSString *)entityName{
@@ -17,5 +17,7 @@
 +(Department *)insertNewObjectInManagedObjectContext:(NSManagedObjectContext *) context{
     return [NSEntityDescription insertNewObjectForEntityForName:[self entityName] inManagedObjectContext:context];
 }
-
+-(NSMutableSet *)mutableEmployees{
+    return [self mutableSetValueForKey:[Employee entityName]];
+}
 @end
