@@ -13,7 +13,7 @@
 
 @interface Department : NSManagedObject
 
-@property (nonatomic, retain) NSNumber * floor;
+@property (nonatomic) int32_t  floor;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet *employees;
 @end

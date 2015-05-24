@@ -51,7 +51,7 @@
     UILabel * namelabel = (UILabel *)[cell viewWithTag:11];
     namelabel.text = employee.name;
     UILabel * agelabel = (UILabel *)[cell viewWithTag:12];
-    agelabel.text = [NSString stringWithFormat:@"%ld",(long)employee.age.integerValue];
+    agelabel.text = [NSString stringWithFormat:@"%ld",(long)employee.age];
     UILabel * birthdaylabel = (UILabel *)[cell viewWithTag:13];
     birthdaylabel.text = employee.identifier;
     return cell;
@@ -62,7 +62,7 @@
         AddEmployeeViewController * svc = segue.sourceViewController;
         Employee * employee = [Employee insertNewObjectInManagedObjectContext:self.managedcontext];
         employee.name = svc.nameTextfield.text;
-        employee.age = @(svc.ageTextfield.text.intValue);
+        employee.age = svc.ageTextfield.text.intValue;
         employee.identifier = svc.idTextfield.text;
         employee.department = self.mydepartment;
         [self.tableView reloadData];
@@ -89,7 +89,7 @@
 -(void)updateEmployeeWithAlert:(Employee *)employee Indexpath:(NSIndexPath *)indexPath{
     UIAlertController * alert = [UIAlertController alertControllerWithTitle:@"Update Employee" message:employee.name preferredStyle:UIAlertControllerStyleAlert];
     [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-        textField.text = [NSString stringWithFormat:@"%d",employee.age.intValue];
+        textField.text = [NSString stringWithFormat:@"%d",employee.age];
         textField.keyboardType = UIKeyboardTypeNumbersAndPunctuation;
     }];
     [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
@@ -100,7 +100,7 @@
         NSArray * textfields = [alert textFields];
         UITextField * ageTextfield = textfields[0];
         UITextField * idTextfield = textfields[1];
-        employee.age = @(ageTextfield.text.integerValue);
+        employee.age = ageTextfield.text.intValue;
         employee.identifier = idTextfield.text;
         [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }]];

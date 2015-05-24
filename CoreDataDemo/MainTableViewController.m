@@ -34,7 +34,7 @@
     ConfigureCell configblock = ^UITableViewCell *(UITableView *tableview, NSIndexPath *indexpath, NSManagedObject *object) {
         UITableViewCell * cell = [tableview dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexpath];
        Department * department = [self.fetchedResultsController objectAtIndexPath:indexpath];
-        cell.textLabel.text = [NSString stringWithFormat:@"Floor: %ld",(long)department.floor.integerValue];
+        cell.textLabel.text = [NSString stringWithFormat:@"Floor: %ld",(long)department.floor];
         cell.detailTextLabel.text = [NSString stringWithFormat:@"Number of employees: %ld",(long)department.employees.count];
         return cell;
     };
@@ -91,7 +91,7 @@
         AddDepartmentViewController * svc = (AddDepartmentViewController * )segue.sourceViewController;
             Department * department = [Department insertNewObjectInManagedObjectContext:[self managedcontext]];
             department.name = svc.nameTextfield.text;
-            department.floor = @(svc.floorTextfiled.text.intValue);
+            department.floor = svc.floorTextfiled.text.intValue;
     }
 }
 
